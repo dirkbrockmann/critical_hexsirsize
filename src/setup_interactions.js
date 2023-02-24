@@ -18,7 +18,6 @@ export default (display,controls,config) => {
 	ct.reset.update(()=>resetparameters(controls))	
 	ct.go.update(()=>startstop(display,config))
 	ct.setup.update(()=>initialize(display,config))
-	param.number_of_particles.widget.update(()=>initialize(display,config))
 	
 }
 

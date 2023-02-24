@@ -13,8 +13,11 @@ const get_variables = (p) => pickBy(p, v =>  has(v, "range"))
 const get_booleans = (p) => pickBy(p, v =>  isBoolean(v.default))  
 const get_choices = (p) => pickBy(p, v =>  has(v, "choices"))  
 
-const deg2rad = d3.scaleLinear().domain([0,360]).range([0,2*Math.PI]);
-const rad2deg = d3.scaleLinear().range([0,360]).domain([0,2*Math.PI]);
 
+const dist = (a,b) => {
+	var dx = Math.abs(a.x-b.x);
+	var dy = Math.abs(a.y-b.y);
+	return Math.sqrt(dx**2+dy**2)
+}
 
-export {toArray,add_id_label,add_widget,get_variables,get_booleans,get_choices,deg2rad,rad2deg}
+export {toArray,add_id_label,add_widget,get_variables,get_booleans,get_choices,dist}
