@@ -6,7 +6,7 @@
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-This explorable illustrates the behavior of a contagion process, captures by the SIRS model, near its critical point.
+This explorable illustrates the behavior of a contagion process, captured by the SIRS model, near its critical point.
 
 The explorable is part of the [**Complexity Exporables Collection**](https://www.complexity-explorables.org). For more information about the system and its behavior consult the explorable
 > [**“Critical HexSIRSize” - The stochastic, spatial SIRS model**](https://www.complexity-explorables.org/explorables/critical-hexsirsize/)
