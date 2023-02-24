@@ -1,7 +1,7 @@
 {
   "name": "@explorables/critical_hexsirsize",
   "title": "Critical HexSIRSize - The stochastic, spatial SIRS model",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "CC-BY-4.0",
   "description": "This explorable illustrates the behavior of a contagion process, captures by the SIRS model, near its critical point.",
   "repository": {
