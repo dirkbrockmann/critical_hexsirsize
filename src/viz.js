@@ -21,14 +21,14 @@ function draw_path(a){
 		
 		
 		ctx.fillStyle=C(d.state);
-		ctx.strokeStyle=C(d.state);
+		//ctx.strokeStyle=C(d.state);
 
-		ctx.lineWidth = 1;
-		ctx.imageSmoothingEnabled = true;
+		//ctx.lineWidth = 0;
+		//ctx.imageSmoothingEnabled = true;
 		ctx.beginPath();
 		ctx.moveTo(X(c[0].x),Y(c[0].y))
 		each(c,(p,i)=>ctx.lineTo(X(c[(i+1)%l].x),Y(c[(i+1)%l].y)))
-		ctx.stroke();
+		//ctx.stroke();
 		ctx.fill();
 		ctx.closePath();
 	})
