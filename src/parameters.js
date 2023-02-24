@@ -1,5 +1,5 @@
 export default {
-		N:70,
+		N:50,
 		seed_size:1,
 		boundary:"dirichlet",
 		infection_rate: {
