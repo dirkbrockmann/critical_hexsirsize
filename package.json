@@ -6,7 +6,7 @@
   "description": "This explorable illustrates the behavior of a contagion process, captures by the SIRS model, near its critical point.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dirkbrockmann/explorable_template.git"
+    "url": "git+https://github.com/dirkbrockmann/critical_hexsirsize.git"
   },
   "author": "Dirk Brockmann (https://rocs.hu-berlin.de)",
   "main": "./dist/index.js",
