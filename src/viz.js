@@ -30,7 +30,7 @@ function draw_path(a){
 		ctx.moveTo(X(c[0].x),Y(c[0].y))
 		each(c,(p,i)=>ctx.lineTo(X(c[(i+1)%l].x),Y(c[(i+1)%l].y)))
 		ctx.fill();
-		ctx.stroke()
+		//ctx.stroke()
 		ctx.closePath();
 	})
 }
