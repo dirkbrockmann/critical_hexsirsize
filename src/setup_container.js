@@ -32,9 +32,13 @@ export default (container_id,config)=>{
 		.append("svg")
 		.attr("viewBox", "0 0 "+config.controls_size.width+" "+config.controls_size.height)
 
-	config.controls_border ? controls.classed("border",true) : controls.classed("border",false)
-	config.display_border ? display.classed("border",true) : display.classed("border",false)		
-
+	if (typeof config.controls_border === "string" && config.controls_border.length > 0){
+		controls.style("border",config.controls_border)
+	}
+	
+	if (typeof config.display_border === "string" && config.display_border.length > 0){
+		display.style("border",config.display_border)
+	}
 
 	if (config.debug){		
 		controls.selectAll(".grid").data(grid.points).enter().append("circle").attr("r",2)

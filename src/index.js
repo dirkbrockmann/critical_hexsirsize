@@ -5,7 +5,7 @@ import setup_interactions from "./setup_interactions.js"
 import setup_controls from "./controls.js"
 import {initialize as setup_simulation} from "./simulation.js"
 import {go} from "./controls.js"
-
+import meta from "./meta.js"
 
 var display,controls,grid;
 
@@ -35,4 +35,4 @@ const halt  = function(){
 	}
 }
 
-export {load,cfg as config,halt};
+export {load,cfg as config,halt,meta};
