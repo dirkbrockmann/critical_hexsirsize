@@ -1,4 +1,5 @@
 export default {
+	id:"critical_hexsirsize",
 	display_type:"canvas", // either svg or canvas depending on explorable
 	debug:false,  // if set to true, draws dots on the control panel to help widget placement
 	controls_border:"",
