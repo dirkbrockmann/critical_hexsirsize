@@ -22,71 +22,20 @@ function draw_path(a){
 		const color = C(d.state);
 
 		ctx.fillStyle=color;
-		//ctx.strokeStyle=color;
-
-		//ctx.lineWidth = 1;
 
 		ctx.beginPath();
 		ctx.moveTo(X(c[0].x),Y(c[0].y))
 		each(c,(p,i)=>ctx.lineTo(X(c[(i+1)%l].x),Y(c[(i+1)%l].y)))
 		ctx.fill();
-		//ctx.stroke()
 		ctx.closePath();
 	})
 }
 
-// function draw_path(a){
-// 	a.forEach(d=>{
-// 		const c = d.cell();
-// 		const l = c.length;
-//
-// 		const color = C(d.state);
-//
-// 		ctx.fillStyle=color;
-// 		ctx.strokeStyle=color;
-//
-// 		ctx.lineWidth = 1;
-//
-// 		ctx.beginPath();
-// 		ctx.moveTo(X(c[0].x),Y(c[0].y))
-// 		each(c,(p,i)=>ctx.lineTo(X(c[(i+1)%l].x),Y(c[(i+1)%l].y)))
-// 		ctx.fill();
-// 		ctx.stroke()
-// 		ctx.closePath();
-// 	})
-// }
 
-// function draw_path(a){
-// 	a.forEach(d=>{
-// 		const c = d.cell();
-// 		const l = c.length;
-//
-//
-// 		ctx.fillStyle=C(d.state);
-// 		ctx.strokeStyle=C(d.state);
-//
-// 		ctx.lineWidth = 1;
-// 		//ctx.imageSmoothingEnabled = true;
-// 		ctx.beginPath();
-// 		ctx.moveTo(X(c[0].x),Y(c[0].y))
-// 		each(c,(p,i)=>ctx.lineTo(X(c[(i+1)%l].x),Y(c[(i+1)%l].y)))
-// 		ctx.stroke();
-// 		ctx.fill();
-// 		ctx.closePath();
-// 	})
-// }
-
-
-const update = (display,config) => {
-
-	
-}
+const update = (display,config) => {}
 
 const go = (display,config) => {
-	
-	 
-	draw_path(agents.filter(a=>a.change==true))
-	
+	draw_path(agents.filter(a=>a.change==true))	
 }
 
 const initialize = (display,config) => {
@@ -104,7 +53,6 @@ const initialize = (display,config) => {
 	draw_path(agents)
 	
 };
-
 
 
 export {initialize,go,update}

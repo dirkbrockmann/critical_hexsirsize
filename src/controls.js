@@ -5,7 +5,7 @@ import cfg from "./config.js"
 import parameters from "./parameters.js"
 
 import {toArray,add_id_label,add_widget,get_variables,get_booleans,get_choices} from "./utils.js"
-
+import styles from "./styles.module.css"
 
 const variables = get_variables(parameters);
 
@@ -20,21 +20,17 @@ const sliders = map(va,
 					.range(v.range)
 					.value(v.default)
 					.size(cfg.widgets.slider_size)
-//					.fontsize(cfg.widgets.fontsize)
 					.girth(cfg.widgets.slider_girth)
-					.knob(cfg.widgets.slider_knob)
-	
+					.knob(cfg.widgets.slider_knob)	
 		);
 
 add_widget(va,sliders);
-
 
 const go = widgets.button().actions(["play","pause"])
 const setup = widgets.button().actions(["back"])
 const reset = widgets.button().actions(["rewind"])
 		
 const buttons = [go,setup,reset];
-
 
 export default (controls,grid)=>{
 
@@ -46,27 +42,30 @@ export default (controls,grid)=>{
 	
 	
 	sliders.forEach((sl,i) => sl.position(sl_pos[i]));
-	
-	
-go.position(grid.position(cfg.widgets.playbutton_anchor.x,cfg.widgets.playbutton_anchor.y))
-	.size(cfg.widgets.playbutton_size);
+		
+	go.position(grid.position(cfg.widgets.playbutton_anchor.x,cfg.widgets.playbutton_anchor.y))
+		.size(cfg.widgets.playbutton_size);
 
-reset.position(grid.position(cfg.widgets.backbutton_anchor.x,cfg.widgets.backbutton_anchor.y)).size(cfg.widgets.button_size);;
+	reset.position(grid.position(cfg.widgets.backbutton_anchor.x,cfg.widgets.backbutton_anchor.y))
+		.size(cfg.widgets.button_size);
 
-setup.position(grid.position(cfg.widgets.resetbutton_anchor.x,cfg.widgets.resetbutton_anchor.y)).size(cfg.widgets.button_size);	
+	setup.position(grid.position(cfg.widgets.resetbutton_anchor.x,cfg.widgets.resetbutton_anchor.y))
+		.size(cfg.widgets.button_size);	
 
-	controls.selectAll(".slider").data(sliders).enter().append(widgets.widget);
-	controls.selectAll(".button").data(buttons).enter().append(widgets.widget);
+	controls.selectAll(null).data(sliders).enter().append(widgets.widget);
+	controls.selectAll(null).data(buttons).enter().append(widgets.widget);
 	
-	const legend = controls.selectAll(".legend").data(cfg.widgets.legend).enter().append("g")
-		.attr("class","legend")
+	const legend = controls.selectAll(null)
+		.data(cfg.widgets.legend).enter().append("g")
+		.attr("class",styles.legend)
 		.attr("transform",(d,i)=>"translate("+leg_pos[i].x+","+leg_pos[i].y+")")
 
-	legend.append("text").text(d=>d).style("font-size",16).style("alignment-baseline","middle")
-		.attr("transform","translate(20,3)")
+	legend.append("text").text(d=>d).attr("transform","translate(20,0)")
 	
 	const colors=[cfg.simulation.S_color,cfg.simulation.I_color,cfg.simulation.R_color]
-	legend.append("circle").attr("r",10).style("fill",((d,i)=>colors[i]))
+	legend.append("circle").attr("r",10)
+	.attr("cy",-5)
+	.style("fill",((d,i)=>colors[i]))
 	
 
 }
