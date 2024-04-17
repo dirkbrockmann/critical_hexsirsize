@@ -1,10 +1,15 @@
 import * as d3 from "d3"
 import {map, replace, capitalize, each, has, isBoolean, pickBy, toPairs } from "lodash-es"
 
-// const add_id_label = (x) => map(toPairs(x), d => {d[1]["id"]=d[0]; d[1]["label"]=replace(capitalize(d[0]),/_/g," "); return d[1]} );
+const add_id_label = (x) => map(toPairs(x), 	
+	d => {
 
-const add_id_label = (x) => map(toPairs(x), d => {d[1]["id"]=d[0]; d[1]["label"]=replace(capitalize(d[0]),/_/g," ")} );
-
+		d[1]["id"]=d[0]; 
+		if(!has(d[1],"label")) {
+			d[1]["label"]=replace(capitalize(d[0]),/_/g," ")			
+		} 
+	});
+	
 const toArray = (x) => map(toPairs(x),d=>d[1]);
 
 const add_widget = (p,w) => each(p,(v,i) => v["widget"]=w[i]);	
