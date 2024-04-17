@@ -1,5 +1,6 @@
 export default {
-  "title": "Critical HexSIRSize",
-  "subtitle": "The stochastic, spatial SIRS model",
-  "description": "The explorable illustrates the behavior of a contagion process, like an epidemic. Susceptibles (S) can be infected by other infected sites (I), nfecteds site become immune and recovered (R), and when immunity wanes immune sites become susceptible again."
+  "title": "Hexagonales COVID",
+  "subtitle": "Ein Modell zur Dynamik von Epidemien",
+  "description": "Das Explorable beschreibt ein einfaches Modell zur Ausbreitung einer Epidemie. Gesunde Pixel (S) können von benachbarten infizierten Pixeln (I) angesteckt werden. Infizierte werden später immun (R) und verlieren ihre Immunität wieder, um dann erneut angesteckt werden zu können.",
+ 
 }

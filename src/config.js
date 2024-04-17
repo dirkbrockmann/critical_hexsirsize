@@ -10,7 +10,7 @@ export default {
 		toggle_label_pos:"right",
 		legend_anchor:{x:1,y:11},
 		legend_gap:4,
-		legend:["Susceptible","Infected","Recovered"],
+		legend:["Gesund (S)","Infiziert (I)","Immun (R)"],
 		playbutton_size: 120,
 		button_size: 70,
 		playbutton_anchor:{x:3,y:2},
