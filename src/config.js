@@ -18,7 +18,7 @@ export default {
 		resetbutton_anchor:{x:7,y:2}
 	},
 	simulation: {
-		delay:0,
+		delay:10,
 		I_color:"#D2042D",
 		S_color:"#40B5AD",
 		R_color:"rgb(0,0,0)"
