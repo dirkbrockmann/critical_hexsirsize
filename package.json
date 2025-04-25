@@ -19,7 +19,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "release": "vite build && npm version patch && git add . && git commit --amend --no-edit && git push --follow-tags && npm publish --access public"
+    "release": "vite build && git add . && git commit -m 'prep release' && npm version patch -m \"release v%s\" && git push --follow-tags && npm publish --access public"
   },
   "keywords": [
     "complexity",
