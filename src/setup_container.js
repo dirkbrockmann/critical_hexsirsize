@@ -11,7 +11,7 @@ export default (container_id,config)=>{
 			config.controls_grid.ny
 		);
 
-	const container = d3.select("#"+container_id).classed(config.id+" "+config.container_class,true)
+	const container = d3.select("#"+container_id).classed("explorable"+" "+config.container_class,true)
 
 	const display = container.append("div")
 		.attr("id","display")
