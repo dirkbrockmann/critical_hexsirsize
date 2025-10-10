@@ -14,7 +14,7 @@ export default () => {
 	  const subtitle = pkg.subtitle;
 	  const description = pkg.description;
       const namespace = name.replace(/[-\s]/g, '_');
-      const containerId = `${namespace}_container`;
+      const containerId = `${namespace}`;
 
       const templatePath = path.resolve('./templates/index.template.html');
       const outputPath = path.resolve('./dist/index.html');
@@ -28,7 +28,6 @@ export default () => {
         .replace(/{{CONTAINER_ID}}/g, containerId);
 	  
 	  
-	  console.log(`📝 Attempting to write to: ${outputPath}`);
 	  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 	  fs.writeFileSync(outputPath, html);
 	  console.log(`✅ Wrote index.html successfully`);

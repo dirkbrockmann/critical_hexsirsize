@@ -8,7 +8,7 @@
 
 {{DESCRIPTION}}
 
-The explorable is part of the [**Complexity Exporables Collection**](https://www.complexity-explorables.org). For more information about the system and its behavior consult the explorable
+The explorable is part of the [**Complexity Explorables Collection**](https://www.complexity-explorables.org). For more information about the system and its behavior consult the explorable
 > [**“{{TITLE}}” - {{SUBTITLE}}**](https://www.complexity-explorables.org/explorables/{{NAME}})
 
 ## Usage & Installation
@@ -24,8 +24,11 @@ If you want to run a local copy without having to rely on the nasty internet, th
 is to install it via `npm`:
 
 ```shell
+mkdir {{NAMESPACE}}
+cd {{NAMESPACE}}
+npm init -y
 npm install @explorables/{{NAMESPACE}}
-open node_modules/@explorables/{{NAMESPACE}}/dist/index.html 
+npx http-server node_modules/@explorables/{{NAMESPACE}}/dist/ 
 ```
 
 ### Embedding the explorable in your site

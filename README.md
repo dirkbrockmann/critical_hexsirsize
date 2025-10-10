@@ -8,7 +8,7 @@
 
 The explorable illustrates the behavior of a contagion process, like an epidemic. Susceptibles (S) can be infected by other infected sites (I), infected site become immune and recover (R), and when immunity wanes immune sites become susceptible again.
 
-The explorable is part of the [**Complexity Exporables Collection**](https://www.complexity-explorables.org). For more information about the system and its behavior consult the explorable
+The explorable is part of the [**Complexity Explorables Collection**](https://www.complexity-explorables.org). For more information about the system and its behavior consult the explorable
 > [**“Critical HexSIRSize” - The stochastic, spatial SIRS model**](https://www.complexity-explorables.org/explorables/critical-hexsirsize)
 
 ## Usage & Installation
@@ -24,8 +24,11 @@ If you want to run a local copy without having to rely on the nasty internet, th
 is to install it via `npm`:
 
 ```shell
+mkdir critical_hexsirsize
+cd critical_hexsirsize
+npm init -y
 npm install @explorables/critical_hexsirsize
-open node_modules/@explorables/critical_hexsirsize/dist/index.html 
+npx http-server node_modules/@explorables/critical_hexsirsize/dist/ 
 ```
 
 ### Embedding the explorable in your site

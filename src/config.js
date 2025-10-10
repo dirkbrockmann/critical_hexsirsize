@@ -21,6 +21,6 @@ export default {
 		delay:10,
 		I_color:"#D2042D",
 		S_color:"#40B5AD",
-		R_color:"rgb(0,0,0)"
+		R_color:"rgb(50,50,50)"
 	}
 }

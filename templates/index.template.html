@@ -8,19 +8,19 @@
  
 </head>
 
-<body>
+<body class="tw:bg-white tw:dark:bg-black">
   <article class="tw:font-sans">
   <center>
-	<section class="tw:px-10 tw:max-w-5xl">
-		<h1 class="tw:font-light tw:text-5xl">{{TITLE}}</h1>
-		<h2 class="tw:font-light tw:text-3xl">{{SUBTITLE}}</h2>
-		<p class="tw:font-light tw:text-2xl">{{DESCRIPTION}}</p>  
+	<section class="tw:px-10 tw:max-w-5xl tw:text-black tw:dark:text-white">
+		<h1 class="tw:font-light tw:text-5xl tw:text-black tw:dark:text-white">{{TITLE}}</h1>
+		<h2 class="tw:font-light tw:text-3xl tw:text-black tw:dark:text-white">{{SUBTITLE}}</h2>
+		<p class="tw:font-light tw:text-2xl tw:text-black tw:dark:text-white">{{DESCRIPTION}}</p>  
 		<div id="{{CONTAINER_ID}}"></div>		
 	</section>
   </center>
   </article>
    <script type="text/javascript"> 
-	   const {{NAMESPACE}}_instance = {{NAMESPACE}}.load('{{NAMESPACE}}_container'); 
+	   const {{NAMESPACE}}_instance = {{NAMESPACE}}.load('{{NAMESPACE}}'); 
 </script>
 </body>
 </html>

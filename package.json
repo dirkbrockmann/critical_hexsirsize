@@ -10,11 +10,29 @@
     "type": "git",
     "url": "git+https://github.com/dirkbrockmann/critical_hexsirsize.git"
   },
+  "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
+  "browser": "./dist/index.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "default": "./dist/index.umd.js"
+    }
+  },
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
   "files": [
-    "dist/"
+    "dist/",
+    "README.md",
+    "LICENSE"
   ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -28,14 +46,14 @@
   ],
   "dependencies": {
     "d3": "^7.8.5",
-    "d3-widgets": "^1.2.3",
+    "d3-widgets": "^2.1.4",
     "lattices": "^1.0.16",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "vite-plugin-css-injected-by-js": "^3.5.2",
     "@tailwindcss/vite": "^4.1.4",
     "tailwindcss": "^4.1.4",
-    "vite": "^6.3.2"
+    "vite": "^6.3.2",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
   }
 }
